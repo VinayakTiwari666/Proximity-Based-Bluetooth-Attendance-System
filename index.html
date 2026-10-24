@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BLE Proximity Attendance</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div>
+                <h1>BLE Proximity Attendance</h1>
+
+                <p class="subtitle">
+                    ESP32-Based Classroom Attendance System
+                </p>
+            </div>
+
+            <div class="connection-area">
+
+                <span id="connectionIndicator" class="connection-indicator"></span>
+
+                <span id="status">
+                    DISCONNECTED
+                </span>
+
+            </div>
+
+        </header>
+
+
+        <!-- Connect Button -->
+        <button id="connectButton" class="connect-button">
+            Connect ESP32
+        </button>
+
+
+        <!-- Attendance Status -->
+        <section class="attendance-card">
+
+            <div class="attendance-header">
+
+                <div>
+                    <p class="section-label">
+                        ATTENDANCE STATUS
+                    </p>
+
+                    <h2 id="attendanceStatus">
+                        ABSENT
+                    </h2>
+                </div>
+
+                <div id="attendanceIcon" class="attendance-icon">
+                    ●
+                </div>
+
+            </div>
+
+            <p id="attendanceMessage" class="attendance-message">
+                Device is currently outside the classroom range.
+            </p>
+
+        </section>
+
+
+        <!-- Device Information -->
+        <section class="section">
+
+            <p class="section-label">
+                DEVICE INFORMATION
+            </p>
+
+            <div class="info-grid">
+
+                <div class="info-card">
+
+                    <span class="info-label">
+                        DEVICE
+                    </span>
+
+                    <strong>
+                        D4C
+                    </strong>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <span class="info-label">
+                        SIGNAL STRENGTH
+                    </span>
+
+                    <strong id="rssi">
+                        --
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Session Information -->
+        <section class="section">
+
+            <p class="section-label">
+                SESSION INFORMATION
+            </p>
+
+            <div class="info-grid">
+
+                <div class="info-card">
+
+                    <span class="info-label">
+                        ARRIVAL TIME
+                    </span>
+
+                    <strong id="arrival">
+                        --
+                    </strong>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <span class="info-label">
+                        LAST SEEN
+                    </span>
+
+                    <strong id="lastSeen">
+                        --
+                    </strong>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <span class="info-label">
+                        DEPARTURE TIME
+                    </span>
+
+                    <strong id="departure">
+                        --
+                    </strong>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <span class="info-label">
+                        SESSION DURATION
+                    </span>
+
+                    <strong id="duration">
+                        --
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- Attendance History -->
+<section class="section">
+
+    <p class="section-label">
+        ATTENDANCE HISTORY
+    </p>
+
+    <div class="history-card">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>DATE</th>
+                    <th>ARRIVAL</th>
+                    <th>DEPARTURE</th>
+                    <th>DURATION</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="attendanceHistory">
+
+                <!-- Records will be added here -->
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+        <!-- Footer -->
+        <footer>
+
+            <span>
+                BLE Proximity System
+            </span>
+
+            <span>
+                •
+            </span>
+
+            <span>
+                ESP32
+            </span>
+
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
