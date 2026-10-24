@@ -1,0 +1,1 @@
+A simple Bluetooth Attendance system which uses an ESP_32 BLE system to keep track of a person's Device using Nrf Connect's Bluetooth Advertising feature - to use it just install the arduino code on an esp32 device and the web based interface
